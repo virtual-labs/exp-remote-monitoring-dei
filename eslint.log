@@ -1,0 +1,8 @@
+
+/home/runner/work/exp-remote-monitoring-dei/exp-remote-monitoring-dei/experiment/simulation/script.js
+  10:9   warning  'Chart' is not defined     no-undef
+  30:9   warning  'Chart' is not defined     no-undef
+  54:17  warning  'CanvasJS' is not defined  no-undef
+
+✖ 3 problems (0 errors, 3 warnings)
+
