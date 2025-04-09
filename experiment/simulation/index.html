@@ -1,298 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Dashboard</title>
-    <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet"> <!--load all styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <title>IoT Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- amCharts 5 -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
-
 <body>
-    <div class="container">
+    <div class="platform-container">
         <header>
-            
-            <div class="branding">
-                <h1><center>IOT Dashboard</h1></center>
+            <div class="header-content">
+                <h1>IoT Dashboard</h1>
+                <div class="dashboard-control">
+                    <span>Dashboard Status</span>
+                    <label class="switch">
+                        <input type="checkbox" id="dashboardToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </div>
-            
         </header>
-        <main>
-            <section class="dashboard-overview">
-                <div class="card">
-                    <div class="device">
-                        <h2>Devices</h2>
-                        <p>Number of Devices</p>
-                    </div>
-                    <span id="num">8</span>
-                </div>
-                <div class="card">
-                    <div class="device">
 
-                        <h2>Locations</h2>
-                        <p>Number of Locations</p>
-                    </div>
-                    <span id="num">0</span>
+        <section class="sensor-values">
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-thermometer-half"></i>
                 </div>
-                <div class="card">
-                    <div class="device">
-                        <i class="fi fi-rs-temperature-high"></i>
-                        <h2>Temperatures</h2>
-                        <p>Number of Temperatures</p>
-                    </div>
-                    <span id="num">5</span>
+                <div class="sensor-info">
+                    <h3>Temperature</h3>
+                    <span id="temperatureValue" class="sensor-value">--°C</span>
                 </div>
-                <div class="card">
-                    <div class="device">
+            </div>
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Humidity</h3>
+                    <span id="humidityValue" class="sensor-value">--%</span>
+                </div>
+            </div>
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Air Quality</h3>
+                    <span id="aqiValue" class="sensor-value">--</span>
+                </div>
+            </div>
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Heat Index</h3>
+                    <span id="heatIndexValue" class="sensor-value">--°C</span>
+                </div>
+            </div>
+        </section>
 
-                        <h2>Lights</h2>
-                        <p>Number of Lights</p>
-                    </div>
-                    <span id="num">0</span>
-                </div>
-                <div class="card">
-                    <div class="device">
+        
 
-                        <h2>All Device</h2>
-                        <p>Number of Devices</p>
-                    </div>
-                    <span id="num">6</span>
-                </div>
-            </section>
-            <section class="temperature-stats">
-                <div class="card1">
-                    <h2>Hall Temperature</h2>
-                    <p style="color: grey;">Show Today Live Statistics</p>
-                    <hr>
-                    <!-- <canvas id="hallTemperatureChart"></canvas> -->
-                    <div id="chartContainer" style="height: 370px; width: 96%;"></div>
-                </div>
-                <div class="card2">
-                    <h2>Hall Temperature</h2>
-                    <p style="color: grey;">Show for now and others</p>
-                    <span class="temperature-list">
-                        <p>Sep 10 <span class="percentage">-4.8%</span> <span class="value">33.5°C</span></p>
-                        <p>Sep 09 <span class="percentage">+10.5%</span> <span class="value">35.2°C</span></p>
-                        <p>Sep 08 <span class="value">31.5°C</span></p>
-                    </span>
-                    <hr>
-                    <canvas id="historicalTemperatureChart"></canvas>
-                </div>
-            </section>
-            <section class="alldevices">
-                <div class="d-card">
-                    <div class="device">
-                        <h2>Kitchen temperature</h2>
-                        <p>Show Today Live Statistics</p>
-                    </div>
-                    <span id="num" style="color: gray; font-size: 1.5rem; margin-top: 20px;">Temperature : <span
-                            style="color: orange;">26°C</span></span>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-temperature-high"></i>
-                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-card">
-                    <div class="device">
-                        <h2>Locations</h2>
-                        <p>Number of Locations</p>
-                    </div>
-                    <div id="num"
-                        style="color: gray; font-size: 1.5rem; margin-top: 20px; display: flex; justify-content: space-between;">
-                        Latitude : <span style="color: orange;">26.53.53</span>
-                        Longitude : <span style="color: orange;">26.26.23</span>
-                    </div>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-card">
-                    <div class="device">
-                        <i class="fi fi-rs-temperature-high"></i>
-                        <h2>Temperatures</h2>
-                        <p>Number of Temperatures</p>
-                    </div>
-                    <span id="num" style="color: gray; font-size: 1.5rem; margin-top: 20px;">Temperature : <span
-                            style="color: orange;">26°C</span></span>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-temperature-half"></i>
-                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-card">
-                    <div class="device">
+        <section class="charts">
+            <div class="chart-card">
+                <h3>Temperature Chart</h3>
+                <div id="temperatureChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+                <h3>Humidity Chart</h3>
+                <div id="humidityChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+                <h3>Air Quality Chart</h3>
+                <div id="aqiChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+                <h3>Heat Index Chart</h3>
+                <div id="heatIndexChart" class="chart-container"></div>
+            </div>
+        </section>
 
-                        <h2>Lights</h2>
-                        <p>Number of Lights</p>
-                    </div>
-                    <span id="num" style="color: gray; font-size: 1.5rem; margin-top: 20px;">Lights : <span
-                            style="color: orange;">10</span></span>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-lightbulb"></i>                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-card">
-                    <div class="device">
-                        <h2>Lobby humidity</h2>
-                        <p>Amount of humidity in precentage</p>
-                    </div>
-                    <span id="num" style="color: gray; font-size: 1.5rem; margin-top: 20px;">Humidity : <span
-                            style="color: orange;">26 <i class="fa-solid fa-droplet"></i></span></span>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-droplet"></i>                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-card">
-                    <div class="device">
-                        <h2>CO2 sensor</h2>
-                        <p>Available CO2</p>
-                    </div>
-                    <span id="num" style="color: gray; font-size: 1.5rem; margin-top: 20px;">CO2 : <span
-                            style="color: orange;">299ppm</span></span>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-temperature-half"></i>
-                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-card">
-                    <div class="device">
-                        <h2>Magnet temperature</h2>
-                        <p>Show Today Live Statistics</p>
-                    </div>
-                    <span id="num" style="color: gray; font-size: 1.5rem; margin-top: 20px;">Temperature : <span
-                            style="color: orange;">29°C</span></span>
-                    <hr>
-                    <div class="icon">
-                        <i class="fa-solid fa-temperature-half"></i>
-                    </div>
-                    <hr>
-                    <div class="bottum" style="display: flex; justify-content: space-between;">
-                        <div class="left" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Average</p>
-                        </div>
-                        <hr>
-                        <div class="center" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Highest</p>
-                        </div>
-                        <hr>
-                        <div class="right" style="text-align: center;">
-                            <h3>N/A°</h3>
-                            <p style="color: grey; font-weight: 100;">Lowest</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <section class="data-table">
+            <div class="table-header">
+                <h2>Sensor Data</h2>
+                <button id="exportTableBtn" class="btn">Export to CSV</button>
+            </div>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Temperature (°C)</th>
+                        <th>Humidity (%)</th>
+                        <th>AQI</th>
+                        <th>Heat Index (°C)</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTableBody"></tbody>
+            </table>
+        </section>
 
-        <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-        <script src="./script.js"></script>
+        <section class="alerts-section">
+            <div class="alerts-header">
+                <h2>Alerts</h2>
+                <div class="alert-controls">
+                    <button id="clearAlertsBtn" class="btn">Clear All</button>
+                    <label class="switch">
+                        <input type="checkbox" id="alertsToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="alertsContainer" class="alerts-container"></div>
+        </section>
+    </div>
+    <div id="notificationToast" class="notification-toast"></div>
+    <script src="script.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/gauge.js"></script>
 </body>
-
-</html>
+</html> 
