@@ -2,37 +2,71 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What does IoT stand for?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Internet of Things",
+        "b": "Interface of Technology",
+        "c": "Internal Operating Tool",
+        "d": "Intelligent Online Tracker"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. IoT stands for Internet of Things, referring to connected devices exchanging data over the internet. <a href='https://en.wikipedia.org/wiki/Internet_of_things'>Learn more</a>",
+        "b": "Incorrect. This is not the correct expansion.",
+        "c": "Incorrect. This is not related to IoT.",
+        "d": "Incorrect. This is not the full form of IoT."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following is an example of an IoT device?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Smart Thermostat",
+        "b": "Paper Notebook",
+        "c": "Whiteboard Marker",
+        "d": "Mechanical Watch"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. A smart thermostat is an IoT device as it connects to the internet and can be monitored remotely. <a href='https://www.ibm.com/topics/internet-of-things'>Read here</a>",
+        "b": "Incorrect. A paper notebook is not internet-connected.",
+        "c": "Incorrect. A marker is not an electronic device.",
+        "d": "Incorrect. A mechanical watch has no IoT capabilities."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which component is typically used to connect sensors to the internet?",
+      "answers": {
+        "a": "ESP8266 or Arduino with Wi-Fi module",
+        "b": "Bluetooth Speaker",
+        "c": "USB Flash Drive",
+        "d": "Laser Printer"
+      },
+      "explanations": {
+        "a": "Correct. Microcontrollers like ESP8266 or Arduino with Wi-Fi module send data to the internet. <a href='https://randomnerdtutorials.com/getting-started-with-esp8266-wifi-module/'>See details</a>",
+        "b": "Incorrect. Bluetooth speakers are not used for sensor-to-internet connections.",
+        "c": "Incorrect. A USB flash drive stores data locally.",
+        "d": "Incorrect. Laser printers are not IoT connectivity devices."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is a cloud platform used in IoT systems?",
+      "answers": {
+        "a": "To store and process IoT data remotely",
+        "b": "To provide electricity to devices",
+        "c": "To replace physical sensors",
+        "d": "To improve device color display"
+      },
+      "explanations": {
+        "a": "Correct. Cloud platforms store, process, and make IoT data accessible from anywhere. <a href='https://azure.microsoft.com/en-us/overview/internet-of-things/what-is-iot/'>Read here</a>",
+        "b": "Incorrect. Power supply is provided by batteries or adapters.",
+        "c": "Incorrect. Sensors are still required for data collection.",
+        "d": "Incorrect. Cloud platforms are unrelated to display quality."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]

@@ -1,1 +1,3 @@
-### Link your theory in here
+An IoT dashboard is a visual interface that displays real-time data collected from connected IoT devices. It allows users to remotely monitor sensor values, device status, and other important parameters through the internet. The dashboard is typically built using web technologies and is connected to a cloud platform (like ThingSpeak, Blynk, or Firebase), which stores and processes the data sent from microcontrollers (e.g., Arduino or ESP8266) and sensors (e.g., temperature, humidity, gas, etc.).
+
+By creating an IoT dashboard, users can track environmental or system changes remotely, receive alerts, and make informed decisions. This experiment demonstrates how to link hardware components with a cloud service and visualize the data through an interactive and user-friendly interface.
