@@ -2,72 +2,104 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the main purpose of an IoT dashboard in remote monitoring?",
+      "question": "How do ThingSpeak and Blynk dashboards differ?",
       "answers": {
-        "a": "To display real-time data from IoT devices",
-        "b": "To only control devices manually",
-        "c": "To design IoT hardware circuits",
-        "d": "To replace cloud storage"
+        "a": "ThingSpeak is web-based, Blynk is app-based",
+        "b": "Both are only app-based",
+        "c": "Blynk is web-based and ThingSpeak is only mobile",
+        "d": "Both support only offline dashboards"
       },
-      "explanations": {
-        "a": "Correct. An IoT dashboard visually represents real-time data from IoT devices for monitoring and analysis.",
-        "b": "Incorrect. While dashboards can allow control, their main purpose is monitoring.",
-        "c": "Incorrect. Hardware design is done separately.",
-        "d": "Incorrect. Dashboards use cloud storage but do not replace it."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Which component is commonly used to send sensor data to the IoT dashboard?",
+      "question": "Why are real-time charts important in IoT?",
       "answers": {
-        "a": "Arduino or ESP8266",
-        "b": "LED display",
-        "c": "Power bank",
-        "d": "Keyboard"
+        "a": "They make dashboards colorful",
+        "b": "They show sensor changes immediately for monitoring",
+        "c": "They reduce power consumption",
+        "d": "They replace sensors completely"
       },
-      "explanations": {
-        "a": "Correct. Microcontrollers like Arduino or ESP8266 send sensor data to cloud platforms.",
-        "b": "Incorrect. LED displays only show local output.",
-        "c": "Incorrect. A power bank only provides power.",
-        "d": "Incorrect. A keyboard is not used for IoT data transmission."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Which platform can be used to store and visualize IoT sensor data?",
+      "question": "How can dashboards improve user experience?",
       "answers": {
-        "a": "ThingSpeak",
-        "b": "MS Word",
-        "c": "Notepad",
-        "d": "Photoshop"
+        "a": "By allowing users to visualize data clearly",
+        "b": "By reducing the number of sensors",
+        "c": "By disabling notifications",
+        "d": "By hiding sensor information"
       },
-      "explanations": {
-        "a": "Correct. ThingSpeak is a cloud platform that can store and visualize IoT data.",
-        "b": "Incorrect. MS Word is for document editing.",
-        "c": "Incorrect. Notepad is for plain text editing.",
-        "d": "Incorrect. Photoshop is for image editing."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Why is cloud connectivity important in an IoT dashboard system?",
+      "question": "What is the role of widgets in IoT dashboards?",
       "answers": {
-        "a": "It enables remote access to device data from anywhere",
-        "b": "It makes the system faster than local storage",
-        "c": "It removes the need for sensors",
-        "d": "It allows offline operation only"
+        "a": "Display and control data visually",
+        "b": "Store data permanently",
+        "c": "Connect Wi-Fi automatically",
+        "d": "Test hardware components"
       },
-      "explanations": {
-        "a": "Correct. Cloud connectivity allows the dashboard to be accessed from anywhere with internet.",
-        "b": "Incorrect. Speed is not the main reason for cloud use.",
-        "c": "Incorrect. Sensors are still needed to collect data.",
-        "d": "Incorrect. Cloud systems require internet, not offline mode."
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How can GPS data be visualized on dashboards?",
+      "answers": {
+        "a": "Using a map widget",
+        "b": "Using a buzzer",
+        "c": "Using a numeric display only",
+        "d": "Using a slider"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why do dashboards require continuous data updates?",
+      "answers": {
+        "a": "To reduce cloud bill",
+        "b": "To keep displayed information accurate and live",
+        "c": "To slow down system processing",
+        "d": "To prevent sensors from working"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What challenge occurs if sensor data is irregular?",
+      "answers": {
+        "a": "Dashboards become faster",
+        "b": "Graphs appear unstable and unreliable",
+        "c": "Widgets disappear",
+        "d": "Wi-Fi becomes stronger"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How is a Node-RED dashboard built?",
+      "answers": {
+        "a": "By arranging nodes and UI widgets in a flow",
+        "b": "By writing only C++ code",
+        "c": "By uploading Excel files",
+        "d": "By using only hardware connections"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is an example of remote monitoring?",
+      "answers": {
+        "a": "Checking home temperature from another city",
+        "b": "Watching a recorded video",
+        "c": "Using a local switch",
+        "d": "Reading data manually"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How do IoT dashboards support decision-making?",
+      "answers": {
+        "a": "By displaying trends that help users take actions",
+        "b": "By replacing microcontrollers",
+        "c": "By deleting old data",
+        "d": "By blocking user inputs"
+      },
+      "difficulty": "intermediate"
     }
   ]
 }
