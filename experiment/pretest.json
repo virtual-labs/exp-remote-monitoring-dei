@@ -2,72 +2,104 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What does IoT stand for?",
+      "question": "What is an IoT dashboard?",
       "answers": {
-        "a": "Internet of Things",
-        "b": "Interface of Technology",
-        "c": "Internal Operating Tool",
-        "d": "Intelligent Online Tracker"
+        "a": "A tool for visualizing sensor data",
+        "b": "A Wi-Fi router",
+        "c": "A sensor calibration device",
+        "d": "A hardware debugging board"
       },
-      "explanations": {
-        "a": "Correct. IoT stands for Internet of Things, referring to connected devices exchanging data over the internet. <a href='https://en.wikipedia.org/wiki/Internet_of_things'>Learn more</a>",
-        "b": "Incorrect. This is not the correct expansion.",
-        "c": "Incorrect. This is not related to IoT.",
-        "d": "Incorrect. This is not the full form of IoT."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Which of the following is an example of an IoT device?",
+      "question": "A dashboard is mainly used for ___ monitoring.",
       "answers": {
-        "a": "Smart Thermostat",
-        "b": "Paper Notebook",
-        "c": "Whiteboard Marker",
-        "d": "Mechanical Watch"
+        "a": "Offline",
+        "b": "Real-time",
+        "c": "Manual",
+        "d": "Random"
       },
-      "explanations": {
-        "a": "Correct. A smart thermostat is an IoT device as it connects to the internet and can be monitored remotely. <a href='https://www.ibm.com/topics/internet-of-things'>Read here</a>",
-        "b": "Incorrect. A paper notebook is not internet-connected.",
-        "c": "Incorrect. A marker is not an electronic device.",
-        "d": "Incorrect. A mechanical watch has no IoT capabilities."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Which component is typically used to connect sensors to the internet?",
+      "question": "ThingSpeak dashboards are made using ___ channels.",
       "answers": {
-        "a": "ESP8266 or Arduino with Wi-Fi module",
-        "b": "Bluetooth Speaker",
-        "c": "USB Flash Drive",
-        "d": "Laser Printer"
+        "a": "MQTT",
+        "b": "Upload",
+        "c": "ThingSpeak",
+        "d": "Data"
       },
-      "explanations": {
-        "a": "Correct. Microcontrollers like ESP8266 or Arduino with Wi-Fi module send data to the internet. <a href='https://randomnerdtutorials.com/getting-started-with-esp8266-wifi-module/'>See details</a>",
-        "b": "Incorrect. Bluetooth speakers are not used for sensor-to-internet connections.",
-        "c": "Incorrect. A USB flash drive stores data locally.",
-        "d": "Incorrect. Laser printers are not IoT connectivity devices."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Why is a cloud platform used in IoT systems?",
+      "question": "Node-RED dashboard is used for creating ___ UI.",
       "answers": {
-        "a": "To store and process IoT data remotely",
-        "b": "To provide electricity to devices",
-        "c": "To replace physical sensors",
-        "d": "To improve device color display"
+        "a": "Hardware",
+        "b": "Flow-based",
+        "c": "Interactive",
+        "d": "Static"
       },
-      "explanations": {
-        "a": "Correct. Cloud platforms store, process, and make IoT data accessible from anywhere. <a href='https://azure.microsoft.com/en-us/overview/internet-of-things/what-is-iot/'>Read here</a>",
-        "b": "Incorrect. Power supply is provided by batteries or adapters.",
-        "c": "Incorrect. Sensors are still required for data collection.",
-        "d": "Incorrect. Cloud platforms are unrelated to display quality."
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which widget shows numeric sensor value?",
+      "answers": {
+        "a": "Gauge",
+        "b": "Chart",
+        "c": "Numeric display",
+        "d": "Button"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A gauge widget represents data in ___ form.",
+      "answers": {
+        "a": "Circular meter",
+        "b": "Text-only",
+        "c": "Table rows",
+        "d": "Audio tones"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which platform uses 'Feeds' for dashboards?",
+      "answers": {
+        "a": "Node-RED",
+        "b": "AWS IoT",
+        "c": "ThingSpeak",
+        "d": "Adafruit IO"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Power BI is connected with which cloud platform?",
+      "answers": {
+        "a": "Azure",
+        "b": "ThingSpeak",
+        "c": "AWS",
+        "d": "IBM"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "An IoT dashboard requires data from ___.",
+      "answers": {
+        "a": "Sensors",
+        "b": "Speakers",
+        "c": "Motors",
+        "d": "Switches only"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which cloud platform is best for beginners?",
+      "answers": {
+        "a": "AWS",
+        "b": "IBM Watson",
+        "c": "ThingSpeak",
+        "d": "Azure"
+      },
+      "difficulty": "intermediate"
     }
   ]
 }
