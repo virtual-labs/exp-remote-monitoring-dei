@@ -1,4 +1,4 @@
-# IoT Dashboard – Theory Module
+## IoT Dashboard – Theory Module
 
 An IoT Dashboard is a visual interface used to monitor real-time sensor data, device status, analytics, and alerts from remote IoT devices. It acts as a centralized control panel where users can view, analyze, and interact with IoT data using charts, gauges, numeric indicators, and maps.
 
