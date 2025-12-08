@@ -1,4 +1,4 @@
-## References
+### References
 
 1. ThingsBoard Documentation, "IoT Dashboards Overview", Available at: https://thingsboard.io/docs
 2. Node-RED Dashboard Guide, "Building IoT Dashboards", Available at: https://nodered.org/docs
