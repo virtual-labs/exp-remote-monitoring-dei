@@ -1,3 +1,1 @@
-## Aim
-
 To design and simulate an IoT dashboard that visualizes live sensor data in real time. The experiment aims to understand UI elements, data graphs, alerts, and remote monitoring using cloud or web interfaces.
