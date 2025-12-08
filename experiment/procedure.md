@@ -1,4 +1,4 @@
-## Procedure
+### Procedure for the experiment is as follows:
 
 1. Open the experiment in the virtual lab for creating an IoT remote monitoring dashboard.  
    A pre-designed static dashboard with multiple charts and widgets is already displayed in the workspace.
