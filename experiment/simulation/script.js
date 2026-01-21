@@ -186,25 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize clear alerts button
     document.getElementById('clearAlertsBtn').addEventListener('click', clearAlerts);
 
-    // Initialize toggle event listeners
-    document.getElementById('temperatureToggle').addEventListener('change', (e) => {
-        sensorStates.temperature = e.target.checked;
-        updateSensorCardState('temperature', e.target.checked);
-    });
+    // Initialize instructions toggle
+    const instructionsToggle = document.getElementById('instructionsToggle');
+    const instructionsContent = document.getElementById('instructionsContent');
+    const toggleIcon = instructionsToggle.querySelector('.toggle-icon');
     
-    document.getElementById('humidityToggle').addEventListener('change', (e) => {
-        sensorStates.humidity = e.target.checked;
-        updateSensorCardState('humidity', e.target.checked);
-    });
-    
-    document.getElementById('aqiToggle').addEventListener('change', (e) => {
-        sensorStates.aqi = e.target.checked;
-        updateSensorCardState('aqi', e.target.checked);
-    });
-    
-    document.getElementById('heatIndexToggle').addEventListener('change', (e) => {
-        sensorStates.heatIndex = e.target.checked;
-        updateSensorCardState('heatIndex', e.target.checked);
+    instructionsToggle.addEventListener('click', () => {
+        instructionsContent.classList.toggle('expanded');
+        toggleIcon.classList.toggle('rotated');
     });
 
     // Initialize dashboard
