@@ -1,0 +1,115 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is an IoT dashboard?",
+      "answers": {
+        "a": "A tool for visualizing sensor data",
+        "b": "A Wi-Fi router",
+        "c": "A sensor calibration device",
+        "d": "A hardware debugging board"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. A dashboard is mainly used for ___ monitoring.",
+      "answers": {
+        "a": "Offline",
+        "b": "Real-time",
+        "c": "Manual",
+        "d": "Random"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. ThingSpeak dashboards are made using ___ channels.",
+      "answers": {
+        "a": "MQTT",
+        "b": "Upload",
+        "c": "ThingSpeak",
+        "d": "Data"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Node-RED dashboard is used for creating ___ UI.",
+      "answers": {
+        "a": "Hardware",
+        "b": "Flow-based",
+        "c": "Interactive",
+        "d": "Static"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which widget shows numeric sensor value?",
+      "answers": {
+        "a": "Gauge",
+        "b": "Chart",
+        "c": "Numeric display",
+        "d": "Button"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. A gauge widget represents data in ___ form.",
+      "answers": {
+        "a": "Circular meter",
+        "b": "Text-only",
+        "c": "Table rows",
+        "d": "Audio tones"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which platform uses 'Feeds' for dashboards?",
+      "answers": {
+        "a": "Node-RED",
+        "b": "AWS IoT",
+        "c": "ThingSpeak",
+        "d": "Adafruit IO"
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Power BI is connected with which cloud platform?",
+      "answers": {
+        "a": "Azure",
+        "b": "ThingSpeak",
+        "c": "AWS",
+        "d": "IBM"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. An IoT dashboard requires data from ___.",
+      "answers": {
+        "a": "Sensors",
+        "b": "Speakers",
+        "c": "Motors",
+        "d": "Switches only"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. Which cloud platform is best for beginners?",
+      "answers": {
+        "a": "AWS",
+        "b": "IBM Watson",
+        "c": "ThingSpeak",
+        "d": "Azure"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. How do ThingSpeak and Blynk dashboards differ?",
+      "answers": {
+        "a": "ThingSpeak is web-based, Blynk is app-based",
+        "b": "Both are only app-based",
+        "c": "Blynk is web-based and ThingSpeak is only mobile",
+        "d": "Both support only offline dashboards"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. Why are real-time charts important in IoT?",
+      "answers": {
+        "a": "They make dashboards colorful",
+        "b": "They show sensor changes immediately for monitoring",
+        "c": "They reduce power consumption",
+        "d": "They replace sensors completely"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. How can dashboards improve user experience?",
+      "answers": {
+        "a": "By allowing users to visualize data clearly",
+        "b": "By reducing the number of sensors",
+        "c": "By disabling notifications",
+        "d": "By hiding sensor information"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What is the role of widgets in IoT dashboards?",
+      "answers": {
+        "a": "Display and control data visually",
+        "b": "Store data permanently",
+        "c": "Connect Wi-Fi automatically",
+        "d": "Test hardware components"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. How can GPS data be visualized on dashboards?",
+      "answers": {
+        "a": "Using a map widget",
+        "b": "Using a buzzer",
+        "c": "Using a numeric display only",
+        "d": "Using a slider"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Why do dashboards require continuous data updates?",
+      "answers": {
+        "a": "To reduce cloud bill",
+        "b": "To keep displayed information accurate and live",
+        "c": "To slow down system processing",
+        "d": "To prevent sensors from working"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. What challenge occurs if sensor data is irregular?",
+      "answers": {
+        "a": "Dashboards become faster",
+        "b": "Graphs appear unstable and unreliable",
+        "c": "Widgets disappear",
+        "d": "Wi-Fi becomes stronger"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. How is a Node-RED dashboard built?",
+      "answers": {
+        "a": "By arranging nodes and UI widgets in a flow",
+        "b": "By writing only C++ code",
+        "c": "By uploading Excel files",
+        "d": "By using only hardware connections"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. Which of the following is an example of remote monitoring?",
+      "answers": {
+        "a": "Checking home temperature from another city",
+        "b": "Watching a recorded video",
+        "c": "Using a local switch",
+        "d": "Reading data manually"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. How do IoT dashboards support decision-making?",
+      "answers": {
+        "a": "By displaying trends that help users take actions",
+        "b": "By replacing microcontrollers",
+        "c": "By deleting old data",
+        "d": "By blocking user inputs"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    }
+  ]
+}
