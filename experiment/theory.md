@@ -77,7 +77,9 @@ Commonly used widgets in IoT dashboards include:
 - **Gauge / Meter** – Shows sensor values within a predefined range  
 - **LED Indicator** – Indicates ON/OFF or normal/alert states  
 - **Toggle Button** – Allows users to remotely control devices  
-- **Text Labels** – Displays system messages or alerts  
+- **Text Labels** – Displays system messages or alerts
+
+<div><img src="./images/widgets.png" width="45%"></div> 
 
 These widgets simplify real-time monitoring by presenting information visually.
 
@@ -106,6 +108,8 @@ Common chart types used in IoT dashboards include:
 - **Bar Charts** – Used for comparing values across categories  
 - **Area Charts** – Used for cumulative data representation  
 - **Pie Charts** – Used for percentage-based distribution  
+
+<div><img src="./images/charts.png" width="45%"></div> 
 
 Each chart type serves a different analytical purpose.
 
