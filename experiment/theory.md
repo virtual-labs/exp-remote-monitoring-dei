@@ -126,30 +126,124 @@ Charts are essential for **long-term monitoring and analytics** in IoT systems.
 
 #### APIs in IoT Dashboards
 
-##### What is an API?
+#### What is an API?
 
 An **API (Application Programming Interface)** is a software interface that allows different systems to communicate with each other. In IoT dashboards, APIs act as a bridge between **IoT devices**, **cloud platforms**, and **dashboard user interfaces**.
 
-##### Role of APIs in IoT Dashboards
+#### Role of APIs in IoT Dashboards
 
 APIs are used to:
 
 - Receive sensor data from ESP8266 / ESP32  
 - Fetch stored data from cloud databases  
 - Update dashboard widgets and charts dynamically  
-- Send control commands back to IoT devices  
+- Send control commands back to IoT devices
 
-APIs enable automation, scalability, and interoperability in IoT systems.
+#### 1. API Communication Structure
 
-##### Types of APIs Used
+In IoT systems, APIs generally follow a client–server model.
 
-Common API types used in IoT dashboards include:
+An HTTP-based REST API request contains:
 
-- **REST APIs** – Based on HTTP GET and POST methods  
-- **MQTT APIs** – Based on publish–subscribe communication  
-- **WebSocket APIs** – Used for real-time bidirectional data updates  
+- Endpoint URL (e.g., /api/sensordata)
 
-The choice of API depends on system requirements such as latency, scalability, and reliability.
+- HTTP Method (GET, POST, PUT, DELETE)
+
+- Headers (Content-Type, Authorization)
+
+- Body (JSON formatted data)
+
+Example of sending temperature data from ESP32:
+
+POST https://cloudserver.com/api/sensordata
+Content-Type: application/json
+
+{
+   "device_id": "ESP32_01",
+   "temperature": 28.5,
+   "humidity": 65
+}
+
+The server responds with:
+
+{
+   "status": "success",
+   "message": "Data stored successfully"
+}
+
+#### 2. Authentication & Security in APIs
+
+IoT APIs use:
+
+- API Keys
+
+- Bearer Tokens
+
+- OAuth Authentication
+
+- HTTPS Encryption
+
+This ensures secure communication between IoT devices and dashboards.
+
+#### 3. Real-Time APIs
+
+For real-time dashboards:
+
+- MQTT is used for low-latency communication.
+
+- WebSockets allow continuous bidirectional communication.
+
+#### API Development for Different IoT Applications
+
+Step 1: Define Application Requirements
+
+Example:
+
+| Application           | Required Data              | Update Frequency |
+| --------------------- | -------------------------- | ---------------- |
+| Smart Agriculture     | Soil moisture, temperature | Every 10 min     |
+| Healthcare Monitoring | Heart rate, SpO2           | Every 5 sec      |
+| Industrial Automation | Machine vibration          | Real-time        |
+
+#### Step 2: Backend Development
+
+APIs can be developed using:
+
+- Node.js + Express
+
+- Python Flask / Django
+
+- PHP
+
+- Firebase Functions
+
+Basic Node.js Example:
+
+app.post('/api/sensordata', (req, res) => {
+   const data = req.body;
+   database.save(data);
+   res.json({status: "success"});
+});
+
+#### Step 3: Database Integration
+
+- MySQL
+
+- MongoDB
+
+- Firebase Realtime Database
+
+- InfluxDB (for time-series data)
+
+#### Step 4: API Testing
+
+Tools used:
+
+- Postman
+
+- Thunder Client
+
+- cURL
 
 #### Data Flow in an IoT Dashboard System
 
@@ -189,11 +283,4 @@ IoT dashboards are widely used in various application domains such as:
 
 This experiment provides a comprehensive understanding of how IoT dashboards are designed and used for remote monitoring. By studying dashboard architecture, widgets, charts, and APIs, learners gain essential knowledge required to design effective and scalable IoT monitoring systems.
 
-#### References
-
-1. IoT Dashboard Design Principles – IEEE Publications  
-2. ThingSpeak Dashboard Documentation  
-3. Internet of Things: A Hands-on Approach – Arshdeep Bahga  
-4. RESTful Web Services – O’Reilly  
-5. Cloud-Based IoT Systems – Springer  
 
