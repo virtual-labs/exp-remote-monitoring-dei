@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- amCharts 5 -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+</head>
+<body>
+    <div class="platform-container">
+        <header>
+            <div class="header-content">
+                <h1>IoT Dashboard</h1>
+                <div class="dashboard-control">
+                    <span>Dashboard Status</span>
+                    <label class="switch">
+                        <input type="checkbox" id="dashboardToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <section class="instructions-section">
+            <div class="instructions-header" id="instructionsToggle">
+                <h2><i class="fas fa-info-circle"></i> How to Use This Dashboard</h2>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="instructions-content" id="instructionsContent">
+                <div class="instructions-grid">
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-power-off"></i>
+                        </div>
+                        <h3>Dashboard Control</h3>
+                        <p>Use the toggle switch in the header to enable/disable the entire dashboard. When disabled, data updates will pause.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-Time Monitoring</h3>
+                        <p>The dashboard updates every 2 seconds with new sensor readings. Charts display the last 20 data points for trend analysis.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Alerts System</h3>
+                        <p>Automatic alerts are triggered when sensor values exceed thresholds. Critical alerts appear as toast notifications.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>Export Data</h3>
+                        <p>Click the "Export to CSV" button in the data table section to download sensor readings for offline analysis.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="sensor-values">
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-thermometer-half"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Temperature</h3>
+                    <span id="temperatureValue" class="sensor-value">--°C</span>
+                </div>
+            </div>
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Humidity</h3>
+                    <span id="humidityValue" class="sensor-value">--%</span>
+                </div>
+            </div>
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Air Quality</h3>
+                    <span id="aqiValue" class="sensor-value">--</span>
+                </div>
+            </div>
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="sensor-info">
+                    <h3>Heat Index</h3>
+                    <span id="heatIndexValue" class="sensor-value">--°C</span>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="charts">
+            <div class="chart-card">
+                <h3>Temperature Chart</h3>
+                <div id="temperatureChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+                <h3>Humidity Chart</h3>
+                <div id="humidityChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+                <h3>Air Quality Chart</h3>
+                <div id="aqiChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+                <h3>Heat Index Chart</h3>
+                <div id="heatIndexChart" class="chart-container"></div>
+            </div>
+        </section>
+
+        <section class="data-table">
+            <div class="table-header">
+                <h2>Sensor Data</h2>
+                <button id="exportTableBtn" class="btn">Export to CSV</button>
+            </div>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Temperature (°C)</th>
+                        <th>Humidity (%)</th>
+                        <th>AQI</th>
+                        <th>Heat Index (°C)</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTableBody"></tbody>
+            </table>
+        </section>
+
+        <section class="alerts-section">
+            <div class="alerts-header">
+                <h2>Alerts</h2>
+                <div class="alert-controls">
+                    <button id="clearAlertsBtn" class="btn">Clear All</button>
+                    <label class="switch">
+                        <input type="checkbox" id="alertsToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="alertsContainer" class="alerts-container"></div>
+        </section>
+    </div>
+    <div id="notificationToast" class="notification-toast"></div>
+    <script src="script.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/gauge.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html> 
